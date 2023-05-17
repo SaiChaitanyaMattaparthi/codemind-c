@@ -1,9 +1,13 @@
 #include<stdio.h>
 int main()
-{ 
-    int n,i,m; 
-    scanf("%d %d",&n,&m);
-    for(i=1;i<=m;i+=2)
+{
+    int n,i,r;
+    scanf("%d %d",&n,&r);
+    for(i=1;i<=r;i+=2)
+{
     printf("%d x %d = %d
 ",n,i,n*i);
+    
+}
+    
 }
