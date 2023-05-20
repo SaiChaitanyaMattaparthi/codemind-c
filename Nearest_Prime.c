@@ -5,50 +5,55 @@ int main()
     scanf("%d",&n);
     for(r=0;r<n;r++)
     {
-        scanf("%d",&m); 
-        for(i=m;i>2;i--)
+        scanf("%d",&m);
+        for(i=m;i>2;i--) 
         {
             c=0;
             for(j=2;j<i;j++)
             {
-                if(i%j==0) 
-                {
+                if(i%j==0)
+                { 
                     c=1;
-                    break;
-                    }
-                    }
-                    if(c==0)
-                    {
-                        t=i;
-                        break;
-                        }
-                        }
-            for(i=m;i<m+100;i++)
+                    break; 
+                    
+                } 
+                
+            }
+            if(c==0) 
             {
-        c=0;
-        for(j=2;j<i;j++) 
-        {
-            if(i%j==0)
-            {
-                c=1;
+                t=i; 
                 break;
                 }
                 }
-                if(c==0)
+                for(i=m;i<m+100;i++)
                 {
-                    d=i;
-                    break;
-                    }
-                    }
-                    if((m-t)<=(d-m))
+                    c=0;
+                    for(j=2;j<i;j++)
                     {
-                        printf("%d
-",t);
-} 
-else 
-{
+                        if(i%j==0) 
+                        {
+                            c=1;
+                            break;
+                            }
+                            }
+                            if(c==0)
+                            {
+                                d=i;
+                                break; 
+                                
+                            }
+                            }
+                            if((m-t)<=(d-m))
+                            {
+                                
     printf("%d
-",d); 
+",t);
     }
-}
+    else
+    {
+        printf("%d
+",d); 
+        
+    }
+    }
 }
