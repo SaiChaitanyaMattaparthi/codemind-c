@@ -18,7 +18,6 @@ int main()
     if(s==n)
     {
         printf("The number %d is a strong number",n);
-        
     }
     else
     {
