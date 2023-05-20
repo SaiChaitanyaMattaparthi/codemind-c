@@ -9,19 +9,23 @@ int main()
         c=0;
         for(i=0;i<n||i<m;i++)
         {
-            k=i*i;
-            if(k%m==n)
+            k=i*i;if(k%m==n)
             {
                 printf("%ld
 ",i);
 c+=1;
 break;
+                
             }
+            
         }
         if(c==0)
         {
             printf("-1
 ");
+            
         }
+        
     }
+    
 }
