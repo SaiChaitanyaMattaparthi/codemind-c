@@ -1,24 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n,t,s,d,c=0,j;
     scanf("%d",&n);
-    for(int i=0;i<n;i++)
+    while(n--)
     {
-        int a,b;int c=0;
-        scanf("%d %d",&a,&b);
-        for(int j=a;j<=b;j++)
+        scanf("%d%d",&t,&s);
+        if(t<s)
         {
-            int m = j%10;if(m==2 || m==3 || m==9)
+            for(j=t;j<=s;j++)
             {
-                c++;
-                
+                while(j)
+                {
+                    d=j%10;
+                    break;
+                }
+                if(d==9 || d==2 || d==3)
+{
+    c++;
+}
             }
-            
-        }
-printf("%d
+            printf("%d
 ",c);
-        
+            c=0;
+        }
     }
-    
 }
