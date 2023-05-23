@@ -1,21 +1,13 @@
-#include <stdio.h>
-int main()
-{
-    int num, large = 0, rem = 0;
-    scanf("%d", &num);
-    while (num > 0)
-    {
-        rem = num % 10;
-        if (rem > large)
-        {
-            large = rem;
-    
-}
-num = num / 10;
-        
-
+#include<stdio.h>
+int main() {
+    int n,max=0;
+    scanf("%d",&n);
+    while (n!=0) {
+        int r=n%10;
+        if (max<r) {
+            max=r;
+        }
+        n=n/10;
     }
-    printf("%d ", large);
-    return 0;
-    
+    printf("%d",max);
 }
