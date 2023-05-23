@@ -1,27 +1,31 @@
 #include<stdio.h>
 int main()
 {
-    int n,d;
+    int n,r,c=0,d=0;
     scanf("%d",&n);
-    while(n)
+    while(n!=0)
     {
-        d=n%10;
-        n=n/10;
-        if(d%2 && n%2)
+        r=n%10;
+        if(r%2==0)
         {
-            printf("Odd");
-            return 0;
+            c++;
         }
-        else if(d%2==0 && n%2==0)
+        else
         {
-            printf("Even");
-            return 0;
-}
-else
-{
-    printf("Mixed");
-    return 0;
-}
+            d++;
+        }
+        n=n/10;
     }
-    return 0;
+    if(c!=0 && d!=0)
+    {
+        printf("Mixed");
+    }
+   else if(c==0&&d!=0)
+    {
+        printf("Odd");
+    }
+    else
+    {
+        printf("Even");
+    }
 }
