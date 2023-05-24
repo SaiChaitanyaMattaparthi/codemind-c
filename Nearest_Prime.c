@@ -1,59 +1,62 @@
 #include<stdio.h>
-int main()
+void fun(int a)
 {
-    int t,d,r,i,n,m,c=0,j;
-    scanf("%d",&n);
-    for(r=0;r<n;r++)
-    {
-        scanf("%d",&m);
-        for(i=m;i>2;i--) 
+    int left=0,right=0,c=0,x,y,i,j;
+    for(int i=a;left==0;i--)
+    { 
+        c=0;
+        for(int j=1;j<=i/2;j++)
         {
-            c=0;
-            for(j=2;j<i;j++)
+            if(i%j==0)
             {
-                if(i%j==0)
-                { 
-                    c=1;
-                    break; 
-                    
-                } 
-                
+                c++;
             }
-            if(c==0) 
-            {
-                t=i; 
-                break;
-                }
-                }
-                for(i=m;i<m+100;i++)
-                {
-                    c=0;
-                    for(j=2;j<i;j++)
-                    {
-                        if(i%j==0) 
-                        {
-                            c=1;
-                            break;
-                            }
-                            }
-                            if(c==0)
-                            {
-                                d=i;
-                                break; 
-                                
-                            }
-                            }
-                            if((m-t)<=(d-m))
-                            {
-                                
-    printf("%d
-",t);
+        }
+        if(c==1)
+        {
+            left=i;
+            x=a-left;
+            break;
+        }
     }
-    else
+    for(int i=a;right==0;i++)
+    {
+        c=0;
+        for(int j=1;j<=i/2;j++)
+        {
+            if(i%j==0)
+            {
+                c++;
+            }
+        }
+        if(c==1)
+ {
+            right=i;
+            y=right-a;
+            break;
+        }
+    }
+    if(y>x||y==x)
     {
         printf("%d
-",d); 
-        
+",left);
     }
+    else if(y<x)
+    {
+        printf("%d
+",right);
     }
+}
+int main()
+{
+    int t;
+    scanf("%d
+",&t);
+    while(t--)
+    {
+        int n;
+        scanf("%d
+",&n);
+       fun(n);
+}
 }
